@@ -37,5 +37,44 @@ export default [
     },
     location: "Norway",
     openSpots: 3,
-  }
+  },
+  {
+    id: 4,
+    title: "Snow Skiing",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 90,
+    coverImg: "snow-ski.jpg",
+    stats: {
+      rating: 4.6,
+      reviewCount: 13
+    },
+    location: "Switzerland",
+    openSpots: 3,
+  },
+  {
+    id: 5,
+    title: "Jet Ski",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 185,
+    coverImg: "jet-ski.jpg",
+    stats: {
+      rating: 4.2,
+      reviewCount: 8
+    },
+    location: "USA",
+    openSpots: 3,
+  },
+  {
+    id: 6,
+    title: "Sky Diving",
+    description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
+    price: 70,
+    coverImg: "ski-dive.jpg",
+    stats: {
+      rating: 4.8,
+      reviewCount: 25
+    },
+    location: "Australia",
+    openSpots: 3,
+  },
 ]

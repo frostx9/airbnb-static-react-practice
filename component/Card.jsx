@@ -9,6 +9,8 @@ export default function Card(props) {
     badge = "SOLD OUT"
   } else if (props.item.location === "Online") {
     badge = "ONLINE"
+  } else if (props.item.location) {
+    badge = props.item.location
   }
 
   return (
