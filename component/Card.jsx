@@ -1,21 +1,31 @@
 import React from "react";
 
-export default function Card() {
+export default function Card(props) {
+
+  console.log(props);
+
+  let badge
+  if (props.item.openSpots === 0) {
+    badge = "SOLD OUT"
+  } else if (props.item.location === "Online") {
+    badge = "ONLINE"
+  }
+
   return (
     <section>
       <div className="card">
-        <img src="../src/assets/katie-zaferes.png" alt="" className="card--image" />
-
+        {badge && <div className="card--badge">{badge}</div>}
+        <img src={`../src/assets/${props.item.coverImg}`} alt="" className="card--image" />
         <div className="card--stats">
           <img src="../src/assets/star.png" alt="" className="card--star" />
-          <span>5.0</span>
-          <span className="gray">(6) .</span>
-          <span className="gray">USA</span>
+          <span>{props.item.stats.rating}</span>
+          <span className="gray">({props.item.stats.reviewCount}).</span>
+          <span className="gray"> {props.item.country}</span>
         </div>
 
       </div>
-      <p>Life Lessns with Katie Zaferes</p>
-      <p><span className="bold">From $136</span>/person</p>
-    </section>
+      <p>{props.item.title}</p>
+      <p><span className="bold">From ${props.item.price}</span>/person</p>
+    </section >
   )
 }
