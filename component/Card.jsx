@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card(props) {
 
-  console.log(props);
+
 
   let badge
   if (props.item.openSpots === 0) {
@@ -17,9 +17,9 @@ export default function Card(props) {
     <section>
       <div className="card">
         {badge && <div className="card--badge">{badge}</div>}
-        <img src={`../src/assets/${props.item.coverImg}`} alt="" className="card--image" />
+        <img src={`/${props.item.coverImg}`} alt="" className="card--image" />
         <div className="card--stats">
-          <img src="../src/assets/star.png" alt="" className="card--star" />
+          <img src="../images/star.png" alt="" className="card--star" />
           <span>{props.item.stats.rating}</span>
           <span className="gray">({props.item.stats.reviewCount}).</span>
           <span className="gray"> {props.item.country}</span>
